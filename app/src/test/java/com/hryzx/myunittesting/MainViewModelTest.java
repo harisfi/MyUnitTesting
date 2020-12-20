@@ -2,8 +2,9 @@ package com.hryzx.myunittesting;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -14,7 +15,7 @@ public class MainViewModelTest {
     private CuboidModel cuboidModel;
 
     private final double dummyWidth = 7, dummyLength = 12, dummyHeight = 6,
-            dummyVolume = 504, dummyCircumfence = 100, dummySurfaceArea = 396;
+            dummyVolume = 504, dummyCircumference = 100, dummySurfaceArea = 396;
 
     @Before
     public void before() {
@@ -32,12 +33,12 @@ public class MainViewModelTest {
     }
 
     @Test
-    public void testCircumfence() {
+    public void testCircumference() {
         cuboidModel = new CuboidModel();
         mainViewModel = new MainViewModel(cuboidModel);
         mainViewModel.save(dummyLength, dummyWidth, dummyHeight);
-        double circumfence = mainViewModel.getCircumfence();
-        assertEquals(dummyCircumfence, circumfence, 0.0001);
+        double circumference = mainViewModel.getCircumference();
+        assertEquals(dummyCircumference, circumference, 0.0001);
     }
 
     @Test
@@ -59,10 +60,10 @@ public class MainViewModelTest {
 
     @Test
     public void testMockCircumfence() {
-        when(mainViewModel.getCircumfence()).thenReturn(dummyCircumfence);
-        double circumfence = mainViewModel.getCircumfence();
-        verify(cuboidModel).getCircumfence();
-        assertEquals(dummyCircumfence, circumfence, 0.0001);
+        when(mainViewModel.getCircumference()).thenReturn(dummyCircumference);
+        double circumfence = mainViewModel.getCircumference();
+        verify(cuboidModel).getCircumference();
+        assertEquals(dummyCircumference, circumfence, 0.0001);
     }
 
     @Test

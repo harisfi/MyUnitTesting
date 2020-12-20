@@ -1,6 +1,6 @@
 package com.hryzx.myunittesting;
 
-public class CuboidModel {
+class CuboidModel {
     private double width, length, height;
 
     public CuboidModel() {}
@@ -22,7 +22,7 @@ public class CuboidModel {
         return 2 * (wl + wh + lh);
     }
 
-    public double getCircumfence() {
+    public double getCircumference() {
         return 4 * (width + length + height);
     }
 }

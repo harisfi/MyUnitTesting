@@ -1,6 +1,6 @@
 package com.hryzx.myunittesting;
 
-public class MainViewModel {
+class MainViewModel {
     private final CuboidModel cuboidModel;
 
     MainViewModel(CuboidModel cuboidModel) {
@@ -11,8 +11,8 @@ public class MainViewModel {
         cuboidModel.save(w, l, h);
     }
 
-    double getCircumfence() {
-        return cuboidModel.getCircumfence();
+    double getCircumference() {
+        return cuboidModel.getCircumference();
     }
 
     double getSurfaceArea() {

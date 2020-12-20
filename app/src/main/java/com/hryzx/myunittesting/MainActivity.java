@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     gone();
                     break;
                 case R.id.btn_calculate_circumfence:
-                    txResult.setText(String.valueOf(mainViewModel.getCircumfence()));
+                    txResult.setText(String.valueOf(mainViewModel.getCircumference()));
                     gone();
                     break;
             }
